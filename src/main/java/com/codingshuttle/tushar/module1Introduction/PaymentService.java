@@ -1,0 +1,23 @@
+package com.codingshuttle.tushar.module1Introduction;
+
+import jakarta.annotation.PostConstruct;
+import jakarta.annotation.PreDestroy;
+import org.springframework.stereotype.Component;
+
+//@Component
+public class PaymentService {
+
+    public void pay(){
+        System.out.println("Paying....");
+    }
+
+    @PostConstruct
+    public void afterInitilized(){
+        System.out.println("Before paying...");
+    }
+
+    @PreDestroy
+    public void beforeDestroy(){
+        System.out.println("Bean Destroyed...");
+    }
+}
